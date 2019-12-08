@@ -13,8 +13,18 @@ export const App = () => {
                         <span className="job">(Developer)</span>
 
                         <div className="buttons">
-                            <button>Github</button>
-                            <button>Linkdin</button>
+                            <a
+                                href="https://github.com/anthonyemg"
+                                target="_blank"
+                            >
+                                Github
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/anthonygreenheck/"
+                                target="_blank"
+                            > 
+                                Linkedin
+                            </a>
                         </div>
                     </div>
 
