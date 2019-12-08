@@ -1,8 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { App } from "./components/App";
+import { Room } from "./components";
 
-import './style.less';
+import "./style.less";
 
-ReactDOM.render(<App />, document.getElementById("app"));
+
+ReactDOM.render(<Room />, document.getElementById("app"));
