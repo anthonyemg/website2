@@ -1,0 +1,91 @@
+@z: 0.5;
+
+.cube {
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 50%;
+    left: 50%;
+
+	&Side {
+        position: absolute;
+		width: @cubeLength;
+		height: @cubeLength;
+        box-shadow: 0 0 0 4px;
+	}
+	
+	:nth-child(1) > & {
+		& .cubeSide {
+			margin: -(@z) * @cubeLength;
+		}
+	}
+	
+	:nth-child(2) > & {
+		top: calc(50% - (@z * @cubeLength));
+		left: calc(50% - (@z * @cubeLength));
+	}
+}
+
+.cubeSide:nth-child(1) {
+    transform: rotateY(90deg) translateZ(@z * @cubeLength);
+}
+
+.cubeSide:nth-child(2) {
+	box-shadow: none;
+	z-index: 1;
+	font-size: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.content {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+
+		.name {
+			font-size: 65px;
+		}
+
+		.job {
+			margin-top: 10px;
+			font-size: 30px;
+		}
+
+		.buttons {
+			display: flex;
+			margin-top: 24px;
+	
+			button {
+				cursor: pointer;
+				padding: 10px;
+				border: 2px solid black;
+
+				&:first-child {
+					background: black;
+					color: white;
+					margin: 0 5px 0 0;
+
+				}
+				&:last-child {
+					background: white;
+					border: 2px solid black;
+					font-weight: 600;
+					margin: 0 0 0 5px;
+				}
+			}
+		}
+	}
+}
+
+.cubeSide:nth-child(3) {
+    transform: rotateY(270deg) translateZ(@z * @cubeLength);
+}
+
+.cubeSide:nth-child(4) {
+    transform: rotateX(90deg) translateZ(@z * @cubeLength);
+}
+
+.cubeSide:nth-child(5) {
+	transform: rotateX(-90deg) translateZ(@z * @cubeLength);
+}

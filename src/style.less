@@ -1,0 +1,26 @@
+@cubeLength: 80vw;
+
+
+#app {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+    display: flex;
+}
+
+.app-container {
+	flex: 1;
+    perspective: 25em;
+}
+
+@import (multiple) "./components/App/style.less";
+
+@media (max-aspect-ratio: ~"1/1") {
+    @cubeLength: 60vw;
+    @import (multiple) "./components/App/style.less";
+}
