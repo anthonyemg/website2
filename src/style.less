@@ -13,14 +13,4 @@ body {
     display: flex;
 }
 
-.app-container {
-	flex: 1;
-    perspective: 25em;
-}
-
-@import (multiple) "./components/App/style.less";
-
-@media (max-aspect-ratio: ~"1/1") {
-    @cubeLength: 60vw;
-    @import (multiple) "./components/App/style.less";
-}
+@import "./components/App/style.less";

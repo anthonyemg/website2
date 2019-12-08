@@ -1,38 +1,10 @@
 import * as React from "react";
-
+import { Cube } from '../Cube';
 
 export const App = () => {
     return (
         <div className="app-container">
-            <div className="cube">
-                <div className="cubeSide" />
-                <div className="cubeSide">
-                    
-                    <div className="content">
-                        <span className="name">Anthony Greenheck</span>
-                        <span className="job">(Developer)</span>
-
-                        <div className="buttons">
-                            <a
-                                href="https://github.com/anthonyemg"
-                                target="_blank"
-                            >
-                                Github
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/anthonygreenheck/"
-                                target="_blank"
-                            > 
-                                Linkedin
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <div className="cubeSide" />
-                <div className="cubeSide" />
-                <div className="cubeSide" />
-            </div>
+            <Cube />
         </div>
     )
 };
