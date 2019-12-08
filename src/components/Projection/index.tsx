@@ -1,17 +1,13 @@
 
 import * as React from "react";
+import { Landing } from "../../components";
 
 
 const Projection = (props: any) => (
     <div className={`projection projection__${props.position}`} id="projection">
 
-        <div className="projection__section projection__landing">
-            <span className="name">Anthony Greenheck</span>
-            <span className="job">(Developer)</span>
-            <div className="buttons">
-                <a href="https://github.com/anthonyemg" target="_blank">Github</a>
-                <a href="https://www.linkedin.com/in/anthonygreenheck/" target="_blank">Linkedin</a>
-            </div>
+        <div className="projection__section">
+            <Landing />
         </div>
 
         <div className="projection__section">

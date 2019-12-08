@@ -3,7 +3,7 @@ import { Projection } from '../../components';
 
 
 const Room = () => {
-    window.addEventListener('scroll', (e) => handleScroll());
+    window.addEventListener('scroll', () => handleScroll());
 
     setTimeout(() => {
         const contentHeight = document.getElementById("projection").offsetHeight;
@@ -16,8 +16,10 @@ const Room = () => {
         document.getElementsByClassName("room__wall--back")[0].scrollTop = offset;
         document.getElementsByClassName("room__wall--top")[0].scrollTop = offset;
         document.getElementsByClassName("room__wall--bottom")[0].scrollTop = offset;
-    };
 
+        const contentHeight = document.getElementById("projection").offsetHeight;
+        document.getElementById("room-container").setAttribute("style", `height: ${contentHeight}px`);
+    };
 
     return (
         <div id="room-container">

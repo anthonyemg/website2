@@ -1,0 +1,46 @@
+.landing {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+
+    .name {
+        font-size: 65px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttons {
+        display: flex;
+        margin-top: 24px;
+
+        a {
+            border: 2px solid #000;
+            cursor: pointer;
+            padding: 14px;
+            text-decoration: none;
+
+            &:first-child {
+                background: #000;
+                color: white;
+                margin: 0 5px 0 0;
+            }
+
+            &:last-child {
+                background: #fff;
+                border: 2px solid #000;
+                color: #000;
+                font-weight: 600;
+                margin: 0 0 0 5px;
+            }
+        }
+    }
+
+    .description {
+        width: 90%;
+        font-size: 34px;
+        line-height: 56px;
+        margin: 30px 0 0 0
+    }
+}
